@@ -1,0 +1,9 @@
+# Geometry Core Library
+
+Библиотека для работы с геометрическими фигурами, реализованная в стиле Web API.
+
+## Установка
+
+```bash
+npm install
+npm run build
