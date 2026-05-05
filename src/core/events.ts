@@ -10,20 +10,24 @@
  * });
  * ```
  */
-export class FigurePropertyChangeEvent extends CustomEvent<{ property: string; oldValue: any; newValue: any }> {
-    /** Имя события для использования в addEventListener */
-    static readonly EVENT_NAME = 'propertychange';
+export class FigurePropertyChangeEvent extends CustomEvent<{
+  property: string;
+  oldValue: any;
+  newValue: any;
+}> {
+  /** Имя события для использования в addEventListener */
+  static readonly EVENT_NAME = "propertychange";
 
-    /**
-     * @param property - Имя изменённого свойства
-     * @param oldValue - Старое значение
-     * @param newValue - Новое значение
-     */
-    constructor(property: string, oldValue: any, newValue: any) {
-        super(FigurePropertyChangeEvent.EVENT_NAME, {
-            detail: { property, oldValue, newValue },
-            bubbles: true,
-            composed: true,
-        });
-    }
+  /**
+   * @param property - Имя изменённого свойства
+   * @param oldValue - Старое значение
+   * @param newValue - Новое значение
+   */
+  constructor(property: string, oldValue: any, newValue: any) {
+    super(FigurePropertyChangeEvent.EVENT_NAME, {
+      detail: { property, oldValue, newValue },
+      bubbles: true,
+      composed: true,
+    });
+  }
 }
